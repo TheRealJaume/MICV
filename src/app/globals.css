@@ -1,0 +1,122 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+  --background: 230 25% 6%;
+  --foreground: 210 40% 98%;
+  --card: 230 25% 8%;
+  --card-foreground: 210 40% 98%;
+  --popover: 230 25% 8%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 258 90% 66%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 226 24% 14%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 226 24% 14%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 258 60% 22%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 228 20% 18%;
+  --input: 228 20% 18%;
+  --ring: 258 90% 66%;
+  --radius: 1.1rem;
+}
+
+.dark {
+  --background: 230 25% 6%;
+  --foreground: 210 40% 98%;
+  --card: 230 25% 8%;
+  --card-foreground: 210 40% 98%;
+  --popover: 230 25% 8%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 258 90% 66%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 226 24% 14%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 226 24% 14%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 258 60% 22%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 228 20% 18%;
+  --input: 228 20% 18%;
+  --ring: 258 90% 66%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings: "ss01", "ss03";
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(126, 87, 255, 0.25), transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(148, 163, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(88, 28, 135, 0.2), transparent 45%),
+    linear-gradient(140deg, rgba(9, 10, 16, 1) 0%, rgba(12, 14, 23, 1) 60%, rgba(7, 8, 12, 1) 100%);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  z-index: 50;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: #0b0f14;
+  color: #f8f5f0;
+  font-size: 0.85rem;
+}
+
+.skip-link:focus {
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  footer,
+  button,
+  .no-print,
+  nav {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
