@@ -26,6 +26,7 @@ const links = [
 
 export default function TopNav() {
   const [active, setActive] = useState(links[0].id);
+  const [open, setOpen] = useState(false);
   const sectionIds = useMemo(() => links.map((link) => link.id), []);
 
   useEffect(() => {
@@ -50,6 +51,19 @@ export default function TopNav() {
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [sectionIds]);
+
+  useEffect(() => {
+    if (open) return;
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+  }, [open]);
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, []);
 
   return (
     <nav className="no-print fixed left-0 right-0 top-0 z-40 border-b border-white/10 bg-ink-950/70 backdrop-blur">
@@ -81,7 +95,7 @@ export default function TopNav() {
             <Printer />
           </Button>
           <ThemeToggle />
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Abrir menú">
                 <Menu />
@@ -95,7 +109,13 @@ export default function TopNav() {
               </SheetHeader>
               <div className="mt-6 flex flex-col gap-4 text-sm">
                 {links.map((link) => (
-                  <SheetClose key={link.id} asChild>
+                  <SheetClose
+                    key={link.id}
+                    asChild
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
                     <a
                       href={`#${link.id}`}
                       className="text-sand-200 transition hover:text-white"
