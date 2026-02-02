@@ -59,7 +59,17 @@ export default function TopNav() {
   }, [open]);
 
   useEffect(() => {
+    const handleHashChange = () => {
+      setOpen(false);
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handleHashChange);
     return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("popstate", handleHashChange);
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
