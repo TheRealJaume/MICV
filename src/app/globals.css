@@ -10,26 +10,31 @@
 
 :root {
   color-scheme: light dark;
-  --background: 230 25% 6%;
-  --foreground: 210 40% 98%;
-  --card: 230 25% 8%;
-  --card-foreground: 210 40% 98%;
-  --popover: 230 25% 8%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 258 90% 66%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 226 24% 14%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 226 24% 14%;
-  --muted-foreground: 215 20% 70%;
-  --accent: 258 60% 22%;
-  --accent-foreground: 210 40% 98%;
+  --background: 30 33% 96%;
+  --foreground: 225 15% 15%;
+  --card: 30 40% 98%;
+  --card-foreground: 225 15% 15%;
+  --popover: 30 40% 98%;
+  --popover-foreground: 225 15% 15%;
+  --primary: 252 88% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 228 24% 92%;
+  --secondary-foreground: 225 18% 20%;
+  --muted: 228 24% 92%;
+  --muted-foreground: 225 10% 40%;
+  --accent: 252 88% 94%;
+  --accent-foreground: 252 48% 30%;
   --destructive: 0 72% 51%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 228 20% 18%;
-  --input: 228 20% 18%;
-  --ring: 258 90% 66%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 228 16% 86%;
+  --input: 228 16% 86%;
+  --ring: 252 88% 60%;
   --radius: 1.1rem;
+  --page-gradient:
+    radial-gradient(circle at 15% 20%, rgba(167, 139, 250, 0.2), transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(148, 163, 255, 0.16), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(99, 102, 241, 0.12), transparent 45%),
+    linear-gradient(140deg, rgba(251, 250, 248, 1) 0%, rgba(246, 245, 250, 1) 60%, rgba(242, 241, 248, 1) 100%);
 }
 
 .dark {
@@ -52,6 +57,11 @@
   --border: 228 20% 18%;
   --input: 228 20% 18%;
   --ring: 258 90% 66%;
+  --page-gradient:
+    radial-gradient(circle at 15% 20%, rgba(126, 87, 255, 0.25), transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(148, 163, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(88, 28, 135, 0.2), transparent 45%),
+    linear-gradient(140deg, rgba(9, 10, 16, 1) 0%, rgba(12, 14, 23, 1) 60%, rgba(7, 8, 12, 1) 100%);
 }
 
 html {
@@ -61,11 +71,7 @@ html {
 body {
   @apply bg-background text-foreground antialiased;
   font-feature-settings: "ss01", "ss03";
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(126, 87, 255, 0.25), transparent 45%),
-    radial-gradient(circle at 85% 25%, rgba(148, 163, 255, 0.18), transparent 40%),
-    radial-gradient(circle at 50% 85%, rgba(88, 28, 135, 0.2), transparent 45%),
-    linear-gradient(140deg, rgba(9, 10, 16, 1) 0%, rgba(12, 14, 23, 1) 60%, rgba(7, 8, 12, 1) 100%);
+  background-image: var(--page-gradient);
 }
 
 main {
@@ -80,8 +86,8 @@ main {
   z-index: 50;
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
-  background: #0b0f14;
-  color: #f8f5f0;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
   font-size: 0.85rem;
 }
 
@@ -91,7 +97,7 @@ main {
 }
 
 ::selection {
-  background: rgba(167, 139, 250, 0.35);
+  background: hsla(var(--primary), 0.2);
 }
 
 section {

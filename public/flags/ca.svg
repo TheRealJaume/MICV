@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 60 40" role="img" aria-label="Catalonia flag">
+  <rect width="60" height="40" fill="#ffd400"/>
+  <rect y="4" width="60" height="4" fill="#d00000"/>
+  <rect y="12" width="60" height="4" fill="#d00000"/>
+  <rect y="20" width="60" height="4" fill="#d00000"/>
+  <rect y="28" width="60" height="4" fill="#d00000"/>
+  <rect y="36" width="60" height="4" fill="#d00000"/>
+</svg>

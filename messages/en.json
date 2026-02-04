@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "title": "Jaume Fabregat Marqués · Product Owner & AI / Backend Engineer",
+    "description": "Professional CV of Jaume Fabregat Marqués. Product leadership, project management, and backend/AI engineering.",
+    "openGraph": {
+      "title": "Jaume Fabregat Marqués · Product Owner & AI / Backend Engineer",
+      "description": "Hybrid profile: Product Owner, Project Manager, and Backend/AI Engineer. Experience building AI-driven digital products.",
+      "type": "website"
+    },
+    "twitter": {
+      "title": "Jaume Fabregat Marqués · Product Owner & AI / Backend Engineer",
+      "description": "Product Owner and Backend/AI Engineer with experience in AI-driven digital products."
+    }
+  },
+  "skipLink": "Skip to main content",
+  "nav": {
+    "print": "Print CV",
+    "menu": "Open menu",
+    "navigation": "Navigation",
+    "close": "Close",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "education": "Education",
+      "languages": "Languages",
+      "contact": "Contact"
+    }
+  },
+  "language": {
+    "label": "Language",
+    "switcher": "Change language",
+    "es": "Spanish",
+    "en": "English"
+  },
+  "theme": {
+    "label": "Change theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "badges": ["Product Owner", "Project Manager", "Backend / AI Engineer"],
+    "eyebrow": "Resume · Hybrid profile",
+    "cta": {
+      "contact": "Contact",
+      "linkedin": "LinkedIn"
+    },
+    "directContact": "Direct contact",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn"
+    },
+    "pillars": ["Product strategy", "Applied AI", "Robust backend", "Agile leadership"]
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Landing · Executive summary",
+      "headline": "Product Owner & AI / Backend Engineer",
+      "summary": [
+        "Product and strategy focus with hands-on backend and applied AI delivery.",
+        "Experience leading cross-functional teams and high-impact digital products.",
+        "Specialized in data-driven platforms, automation, and intelligent systems.",
+        "Participated in startup acceleration programs: Wayra (Telefónica) and La Nave (Community of Madrid)."
+      ],
+      "ctaPrimary": "View experience",
+      "ctaSecondary": "Contact"
+    },
+    "stats": {
+      "experience": "Experience",
+      "experienceValue": "6+ years",
+      "projects": "Projects",
+      "projectsValue": "5",
+      "focus": "Focus",
+      "focusValue": "Product + AI"
+    },
+    "highlights": {
+      "title": "Highlights",
+      "items": [
+        "End-to-end leadership of digital products focused on business and user outcomes.",
+        "AI solution design and scalable architectures oriented to results.",
+        "Technical team management and stakeholder alignment.",
+        "Hybrid background across Product Ownership, Project Management, and Backend/AI engineering.",
+        "Delivered education and project-management products with personalization and automation."
+      ]
+    },
+    "quickLook": {
+      "projects": "Project quick look",
+      "projectsCta": "View projects",
+      "skills": "Core skills",
+      "skillsCta": "View skills"
+    },
+    "cta": {
+      "eyebrow": "Collaboration",
+      "title": "Ready to build something ambitious?",
+      "description": "Let’s align on goals, scope, and the impact you want.",
+      "button": "Let’s talk"
+    }
+  },
+  "sections": {
+    "about": {
+      "eyebrow": "Profile",
+      "title": "About me"
+    },
+    "experience": {
+      "eyebrow": "Track record",
+      "title": "Professional experience",
+      "more": "See more"
+    },
+    "projects": {
+      "eyebrow": "Impact",
+      "title": "Featured projects"
+    },
+    "skills": {
+      "eyebrow": "Capabilities",
+      "title": "Skills",
+      "tabs": {
+        "tech": "Technical",
+        "product": "Product & Management"
+      }
+    },
+    "education": {
+      "eyebrow": "Education",
+      "title": "Education"
+    },
+    "languages": {
+      "eyebrow": "Communication",
+      "title": "Languages"
+    },
+    "contact": {
+      "eyebrow": "Collaboration",
+      "title": "Contact",
+      "description": "Available to lead AI products, scale backend platforms, and connect strategy with execution.",
+      "location": "Madrid · Remote-friendly",
+      "actions": {
+        "email": "Send email",
+        "phone": "Call",
+        "linkedin": "View LinkedIn"
+      },
+      "tooltip": {
+        "email": "Email",
+        "phone": "Phone",
+        "linkedin": "LinkedIn"
+      }
+    }
+  },
+  "projects": {
+    "spotlight": "Project spotlight"
+  },
+  "experience": {
+    "callout": {
+      "eyebrow": "Key achievements",
+      "title": "Measurable impact across product and teams",
+      "description": "From strategy to delivery: scalable solutions, aligned teams, and outcome-driven execution."
+    }
+  },
+  "about": {
+    "keywords": ["Product", "Applied AI", "Backend", "Strategy", "Delivery"],
+    "story": {
+      "title": "Professional narrative",
+      "body": [
+        "I combine product vision with technical execution to turn ideas into real solutions.",
+        "I move comfortably between business, data, and technology to connect strategy with results."
+      ]
+    },
+    "callouts": {
+      "title": "How I work",
+      "items": [
+        "Impact first: focus on metrics, user value, and business goals.",
+        "Sustainable pace: iterative delivery with early feedback.",
+        "Open collaboration: clear communication with teams and stakeholders."
+      ]
+    },
+    "values": {
+      "product": {
+        "title": "Product-minded",
+        "description": "Decisions guided by value, experience, and metrics."
+      },
+      "delivery": {
+        "title": "Delivery-focused",
+        "description": "Solid execution with a focus on quality and speed."
+      },
+      "collaboration": {
+        "title": "Collaborative",
+        "description": "Cross-functional work to align vision and execution."
+      }
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Jaume Fabregat Marqués · Product Owner & AI / Backend Engineer",
+      "description": "Landing page with profile highlights and quick access to experience, projects, and skills."
+    },
+    "about": {
+      "title": "About · Jaume Fabregat Marqués",
+      "description": "Professional summary, focus, and key strengths."
+    },
+    "experience": {
+      "title": "Experience · Jaume Fabregat Marqués",
+      "description": "Professional track record and key achievements."
+    },
+    "projects": {
+      "title": "Projects · Jaume Fabregat Marqués",
+      "description": "Selected projects and digital products."
+    },
+    "skills": {
+      "title": "Skills · Jaume Fabregat Marqués",
+      "description": "Technical and product competencies."
+    },
+    "education": {
+      "title": "Education · Jaume Fabregat Marqués",
+      "description": "Academic background and specializations."
+    },
+    "languages": {
+      "title": "Languages · Jaume Fabregat Marqués",
+      "description": "Languages and proficiency level."
+    },
+    "contact": {
+      "title": "Contact · Jaume Fabregat Marqués",
+      "description": "Contact channels and collaboration."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Jaume Fabregat Marqués · Digital CV",
+    "tagline": "Design and development focused on product, AI, and technical leadership.",
+    "linksTitle": "Links"
+  },
+  "skills": {
+    "groups": {
+      "core": "Core stack",
+      "practices": "Practices",
+      "product": "Product & management",
+      "tooling": "Tooling",
+      "soft": "Soft skills"
+    },
+    "practices": ["Architecture", "CI/CD", "Testing", "Documentation", "Agile delivery"],
+    "tooling": ["Jira", "GitHub", "Trello", "Figma", "Notion"],
+    "soft": [
+      "Stakeholder communication",
+      "Product vision",
+      "Prioritization and decision-making",
+      "Negotiation and alignment",
+      "Cross-functional leadership",
+      "Strategic thinking",
+      "User empathy"
+    ]
+  },
+  "education": {
+    "accelerators": {
+      "title": "Acceleration programs",
+      "description": "Startup leadership training and product acceleration programs.",
+      "items": ["Wayra (Telefónica)", "La Nave (Community of Madrid)"]
+    }
+  },
+  "cv": {
+    "headline": "Product Owner & AI / Backend Engineer with experience leading AI-driven digital products.",
+    "summary": "Enthusiastic electronic engineer with a strong drive to contribute to team success through rigorous work, attention to detail, and excellent organizational skills. Passionate about Artificial Intelligence, software development, and the intersection of business and technology. Motivated to learn, grow, and create real impact through innovative solutions. Experience in startup acceleration programs such as Wayra (Telefónica) and La Nave (Community of Madrid).",
+    "languages": [
+      { "name": "Spanish", "level": "Native", "flag": "/flags/es.svg" },
+      { "name": "English", "level": "Advanced", "flag": "/flags/gb.svg" },
+      { "name": "Catalan", "level": "Basic", "flag": "/flags/ca.svg" }
+    ],
+    "experience": [
+      {
+        "role": "Computer Vision Developer",
+        "company": "Philotech Ibérica",
+        "period": "2019",
+        "highlights": [
+          "Built an internal check-in application using computer vision algorithms.",
+          "Implemented neural network models for visual analysis.",
+          "Tech stack: TensorFlow, Pandas, NumPy, SciPy, Matplotlib.",
+          "End-to-end development following Scrum methodology."
+        ]
+      },
+      {
+        "role": "Project Manager & Backend Developer",
+        "company": "Monk",
+        "period": "2019 to 2023",
+        "highlights": [
+          "Built a platform to personalize math learning in schools.",
+          "Designed and implemented an IRT algorithm that dynamically adjusts questions based on student profiles.",
+          "Tech stack: Django (Python), SQL (MariaDB), React (JavaScript), Shiny (R).",
+          "Used management tools: GitHub, Jira, Trello.",
+          "End-to-end project management under Scrum."
+        ]
+      },
+      {
+        "role": "Project Manager",
+        "company": "Ninja Talent",
+        "period": "2023 to 2024",
+        "highlights": [
+          "Built an application to assess tech talent across different languages and frameworks.",
+          "Product management and coordination of technical teams.",
+          "Stack: Django (Python), SQL (MariaDB), React.",
+          "Startup leadership training in acceleration programs: La Nave (Community of Madrid) and Wayra (Telefónica)."
+        ]
+      },
+      {
+        "role": "Product Owner",
+        "company": "Waimatech",
+        "period": "2024 to Now",
+        "highlights": [
+          "Full lifecycle leadership of digital products (BoostWorker, BookTheCity, NinjaTalent).",
+          "Requirements, roadmap, and release management aligned with business and user needs.",
+          "Product Backlog prioritization with agile methods (Scrum / Kanban).",
+          "Cross-functional coordination with engineering, design, QA, marketing, sales, and stakeholders.",
+          "Constant bridge between business and technology."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "MathKeyboard",
+        "period": "2017–2022",
+        "description": "Mathematical keyboard to simplify writing mathematical expressions.",
+        "highlights": ["Hardware design with SolidEdge.", "Programming on Arduino."]
+      },
+      {
+        "name": "Educational AI Applications",
+        "period": "",
+        "description": "Prediction and recommendation algorithms for math exercises.",
+        "highlights": ["Extensive use of TensorFlow, Pandas, NumPy, SciPy, Matplotlib."]
+      },
+      {
+        "name": "YPM — Your Project Manager",
+        "period": "2024–Now",
+        "description": "AI-powered project management platform to accelerate execution and planning.",
+        "highlights": [
+          "Import requirements from PDF.",
+          "Automatic generation of user stories and tasks.",
+          "Estimation and assignment based on RAG and historical data.",
+          "Sprint organization.",
+          "Stack: Django, React, LangChain, Qdrant."
+        ]
+      },
+      {
+        "name": "Viajame",
+        "period": "2024–2025",
+        "description": "AI travel planning and organization app.",
+        "highlights": [
+          "Automatic generation of travel plans.",
+          "Import preferences via WhatsApp.",
+          "Using n8n, Google APIs, and WhatsApp."
+        ]
+      }
+    ],
+    "skills": {
+      "technical": [
+        "Python",
+        "Django",
+        "React",
+        "SQL / Database Design",
+        "Artificial Intelligence & Deep Learning",
+        "TensorFlow",
+        "Pandas",
+        "NumPy",
+        "SciPy",
+        "Matplotlib",
+        "RAG Architectures",
+        "LangChain",
+        "Qdrant",
+        "n8n"
+      ],
+      "product": [
+        "Product Ownership",
+        "Project Management",
+        "Scrum / Kanban",
+        "Backlog and Roadmap Management",
+        "Jira",
+        "Trello",
+        "GitHub",
+        "Cross-functional Team Coordination"
+      ]
+    },
+    "education": [
+      {
+        "title": "Industrial and Automation Electronic Engineering",
+        "institution": "Universidad Carlos III de Madrid",
+        "period": "2015–2020"
+      },
+      {
+        "title": "Artificial Intelligence + Business Management",
+        "institution": "Aalto University (Helsinki, Finland)",
+        "period": "2018–2019",
+        "notes": ""
+      },
+      {
+        "title": "Deep Learning",
+        "institution": "MBIT School",
+        "period": "2021–2022",
+        "notes": ""
+      }
+    ]
+  }
+}

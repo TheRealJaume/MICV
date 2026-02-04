@@ -195,7 +195,7 @@ export default function BeamsBackground({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden bg-ink-950",
+        "relative w-full overflow-hidden bg-background",
         className
       )}
     >
@@ -209,7 +209,7 @@ export default function BeamsBackground({
         animate={{
           opacity: [0.05, 0.15, 0.05]
         }}
-        className="absolute inset-0 bg-ink-950/30"
+        className="absolute inset-0 bg-background/40"
         style={{
           backdropFilter: "blur(50px)"
         }}

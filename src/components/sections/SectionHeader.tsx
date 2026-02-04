@@ -10,17 +10,20 @@ export default function SectionHeader({
   children?: ReactNode;
 }) {
   return (
-    <div className="mb-8 space-y-3">
+    <div className="mb-8 space-y-4">
       {eyebrow ? (
-        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.45em] text-sand-300/80">
-          {eyebrow}
-        </p>
+        <div className="flex items-center gap-3">
+          <span className="h-px w-10 bg-primary/60" />
+          <p className="text-[0.65rem] font-semibold uppercase tracking-[0.45em] text-muted-foreground">
+            {eyebrow}
+          </p>
+        </div>
       ) : null}
       <div className="space-y-2">
-        <h2 className="text-3xl font-display font-semibold tracking-tight text-sand-50 md:text-4xl">
+        <h2 className="text-3xl font-display font-semibold tracking-tight text-foreground md:text-4xl">
           {title}
         </h2>
-        {children ? <div className="text-sm text-sand-200/80">{children}</div> : null}
+        {children ? <div className="text-sm text-muted-foreground">{children}</div> : null}
       </div>
     </div>
   );

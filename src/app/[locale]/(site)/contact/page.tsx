@@ -1,0 +1,30 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+import Contact from "@/components/sections/Contact";
+import { sectionIds } from "@/lib/sections";
+import { buildPageMetadata } from "@/lib/metadata";
+
+export async function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale });
+
+  return buildPageMetadata({
+    t,
+    locale: params.locale,
+    path: "contact",
+    titleKey: "pages.contact.title",
+    descriptionKey: "pages.contact.description"
+  });
+}
+
+export default function ContactPage() {
+  return (
+    <main id={sectionIds.content} className="mx-auto w-full max-w-6xl px-6 pb-20 pt-28">
+      <Contact />
+    </main>
+  );
+}

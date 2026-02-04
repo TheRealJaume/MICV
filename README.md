@@ -27,8 +27,21 @@ npm run start
 3. Asegura que el framework detectado es Next.js.
 4. Deploy.
 
+## Rutas principales
+- `/es` y `/en` (landing)
+- `/es/about`, `/en/about`
+- `/es/experience`, `/en/experience`
+- `/es/projects`, `/en/projects`
+- `/es/skills`, `/en/skills`
+- `/es/education`, `/en/education`
+- `/es/languages`, `/en/languages`
+- `/es/contact`, `/en/contact`
+
 ## Personalización rápida
-- Contenido: `src/data/content.ts`
-- Metadatos/SEO: `src/app/layout.tsx`
+- Contenido: `messages/es.json` y `messages/en.json`
+- Metadatos/SEO por página: `src/lib/metadata.ts`
 - Estilos globales: `src/app/globals.css`
-- Secciones: `src/components/*`
+- Secciones reutilizables: `src/components/sections`
+
+## Notas de UI
+- Guía de diseño y decisiones: `docs/ui_upgrade_notes.md`
