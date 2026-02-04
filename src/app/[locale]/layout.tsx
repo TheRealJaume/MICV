@@ -1,8 +1,9 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
 
 import { locales } from "@/i18n";
-import { sectionIds } from "@/lib/sections";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -13,16 +14,21 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const messages = await getMessages();
-  const t = await getTranslations({ locale: params.locale });
+  const { locale } = await params;
+
+  // ✅ Type guard + valida locale
+  if (!hasLocale(locales, locale)) notFound();
+
+  // ✅ Antes de cualquier API de next-intl
+  setRequestLocale(locale);
+
+  // ✅ Pásalo explícito para evitar fallback a headers()
+  const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider locale={params.locale} messages={messages}>
-      <a className="skip-link" href={`#${sectionIds.content}`}>
-        {t("skipLink")}
-      </a>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       {children}
     </NextIntlClientProvider>
   );

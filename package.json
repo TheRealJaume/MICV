@@ -23,7 +23,7 @@
     "lucide-react": "^0.469.0",
     "motion": "^11.11.13",
     "next": "14.2.5",
-    "next-intl": "^3.14.1",
+    "next-intl": "^4.8.2",
     "next-themes": "^0.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",

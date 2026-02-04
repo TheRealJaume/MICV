@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ArrowRight,
   Award,
@@ -22,21 +22,29 @@ import type { Project, Skills as SkillsData } from "@/types/cv";
 export async function generateMetadata({
   params
 }: {
-  params: { locale: string };
+  params: { locale: string } | Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale });
+  const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
 
   return buildPageMetadata({
     t,
-    locale: params.locale,
+    locale,
     path: "",
     titleKey: "pages.home.title",
     descriptionKey: "pages.home.description"
   });
 }
 
-export default async function HomePage({ params }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale: params.locale });
+export default async function HomePage({
+  params
+}: {
+  params: { locale: string } | Promise<{ locale: string }>;
+}) {
+  const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const highlights = t.raw("home.highlights.items") as string[];
   const highlightIcons = [Shield, Rocket, Layers3];
   const projects = (t.raw("cv.projects") as Project[]).slice(0, 3);
@@ -68,13 +76,13 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild>
-              <Link href={`/${params.locale}/experience`}>
+              <Link href={`/${locale}/experience`}>
                 {t("home.hero.ctaPrimary")}
                 <ArrowRight />
               </Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href={`/${params.locale}/contact`}>{t("home.hero.ctaSecondary")}</Link>
+              <Link href={`/${locale}/contact`}>{t("home.hero.ctaSecondary")}</Link>
             </Button>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
@@ -138,7 +146,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               </div>
             ))}
             <Button variant="outline" asChild className="mt-4 w-fit">
-              <Link href={`/${params.locale}/projects`}>{t("home.quickLook.projectsCta")}</Link>
+              <Link href={`/${locale}/projects`}>{t("home.quickLook.projectsCta")}</Link>
             </Button>
           </CardContent>
         </Card>
@@ -155,7 +163,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
             ))}
             <div className="w-full">
               <Button variant="outline" asChild className="mt-4 w-fit">
-                <Link href={`/${params.locale}/skills`}>{t("home.quickLook.skillsCta")}</Link>
+                <Link href={`/${locale}/skills`}>{t("home.quickLook.skillsCta")}</Link>
               </Button>
             </div>
           </CardContent>
@@ -175,7 +183,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <p className="text-sm text-muted-foreground">{t("home.cta.description")}</p>
             </div>
             <Button asChild>
-              <Link href={`/${params.locale}/contact`}>{t("home.cta.button")}</Link>
+              <Link href={`/${locale}/contact`}>{t("home.cta.button")}</Link>
             </Button>
           </CardContent>
         </Card>

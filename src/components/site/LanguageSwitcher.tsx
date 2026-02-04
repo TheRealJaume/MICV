@@ -2,7 +2,7 @@
 
 import { Globe } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback } from "react";
 
 import { locales, type Locale } from "@/i18n";
@@ -21,21 +21,20 @@ export default function LanguageSwitcher() {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const handleSwitch = useCallback(
     (nextLocale: Locale) => {
       const pathWithoutLocale = pathname.replace(/^\/(es|en)(?=\/|$)/, "");
-      const search = searchParams.toString();
+      const search = typeof window !== "undefined" ? window.location.search : "";
       const hash = typeof window !== "undefined" ? window.location.hash : "";
       const nextPath = `/${nextLocale}${pathWithoutLocale || ""}${
-        search ? `?${search}` : ""
+        search ? `${search}` : ""
       }${hash}`;
 
       document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=${localeCookieMaxAge}`;
       router.replace(nextPath);
     },
-    [pathname, router, searchParams]
+    [pathname, router]
   );
 
   return (

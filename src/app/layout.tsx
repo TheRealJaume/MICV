@@ -1,7 +1,7 @@
 import { Outfit, Sora } from "next/font/google";
-import { getLocale } from "next-intl/server";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
+import { defaultLocale } from "@/i18n";
 
 const display = Outfit({
   subsets: ["latin"],
@@ -16,10 +16,8 @@ const body = Sora({
 });
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = await getLocale();
-
   return (
-    <html lang={locale} className={`${display.variable} ${body.variable}`}>
+    <html lang={defaultLocale} className={`${display.variable} ${body.variable}`}>
       <body className="font-body">
         <ThemeProvider>{children}</ThemeProvider>
       </body>

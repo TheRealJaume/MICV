@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server"; // <- añade setRequestLocale
 
 import { profile } from "@/content/profile";
 import { Separator } from "@/components/ui/separator";
 
-export default async function Footer() {
-  const t = await getTranslations();
+export default async function Footer({ locale }: { locale: string }) {
+  // Opcional pero recomendable (refuerza static rendering)
+  setRequestLocale(locale);
+  const t = await getTranslations({locale});
+
   const year = new Date().getFullYear();
-  const locale = await getLocale();
   const links = [
     { href: "", label: t("nav.links.home") },
     { href: "about", label: t("nav.links.about") },

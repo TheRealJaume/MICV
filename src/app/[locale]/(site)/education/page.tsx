@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import Education from "@/components/sections/Education";
 import { sectionIds } from "@/lib/sections";
@@ -8,13 +8,15 @@ import { buildPageMetadata } from "@/lib/metadata";
 export async function generateMetadata({
   params
 }: {
-  params: { locale: string };
+  params: { locale: string } | Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale });
+  const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
 
   return buildPageMetadata({
     t,
-    locale: params.locale,
+    locale,
     path: "education",
     titleKey: "pages.education.title",
     descriptionKey: "pages.education.description"
